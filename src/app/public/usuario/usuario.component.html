@@ -1,0 +1,30 @@
+
+<div class="row">
+
+
+    <div class="d-flex justify-content-center mt-4">
+
+        <div class="card text-white bg-dark mb-3 " style="max-width: 18rem;">
+            <div class="card-header">Datos del Propietario:</div>
+            <div class="card-body">
+                <span class="titulo">Nombre Completo: </span> <span>{{nombre}}</span>
+                <br>
+                <span class="titulo">Ubicacion: </span> <span>{{pais}} </span> <span>{{ciudad}}</span>
+                <br>
+                <span class="titulo">Contacto:</span>
+                <br>
+                <span class="titulo">Celular: </span> <a [href]="'tel:+57'+celular">{{celular}}</a>
+                <br>
+                <span class="titulo">Celular Alterno: </span> <a [href]="'tel:+57'+telefono_alterno" >{{telefono_alterno}}</a>
+                <br>
+                <span class="titulo">Correo Electronico: </span> <span>{{correo}}</span>
+                
+              
+            </div>
+          </div>
+
+
+    </div>
+    
+
+</div>

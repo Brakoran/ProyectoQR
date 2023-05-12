@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Propiedades del QR CSS Contenedor */
+.qrClas{
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(8px,8px,8px #3333);
+}
+
+.qrClas img{
+   border: 3px outset #1237;
+}
+/* Propiedades del QR CSS */

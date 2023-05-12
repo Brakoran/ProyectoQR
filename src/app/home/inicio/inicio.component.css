@@ -1,0 +1,8 @@
+img{
+    max-width: 90%;
+    max-height: 90%;
+    height: 12rem;
+    width: 15rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(20, 20, 20, 0.45);
+}

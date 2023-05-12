@@ -1,0 +1,91 @@
+
+<div class="row">
+
+
+    <div class="contenedorLogin p-3 px-3">
+
+        <!-- formulario login -->
+        <form class="mt-4" (ngSubmit)="validarRegistro(registroForm)" #registroForm="ngForm">
+    
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electronico:</label>
+                <input type="email" class="form-control" id="correo" name="correo"  ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"  ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="celular" class="form-label">Celular:</label>
+                <input type="text" class="form-control" id="celular" name="celular" ngModel >
+            </div>
+    
+            <div class="mb-3">
+                <label for="telefonoAlterno" class="form-label">Telefono Alterno:</label>
+                <input type="text" class="form-control" id="telefonoAlterno" name="telefonoAlterno" ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="pais" class="form-label">Pais:</label>
+                <input type="text" class="form-control" id="pais" name="pais" ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" class="form-control" id="ciudad" name="ciudad" ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="clave1" class="form-label">Clave:</label>
+                <input type="text" class="form-control" id="clave1" name="clave1" ngModel>
+            </div>
+    
+            <div class="mb-3">
+                <label for="clave2"  class="form-label">Repita su Clave:</label>
+                <input type="text" class="form-control" id="clave2" name="clave2" ngModel>
+            </div>
+                
+            <!-- Div Condicional para mostrar los errores -->
+            <div *ngIf="!camposLlenos">
+                <div class="errores">
+                    <div class="alert alert-warning my-3" role="alert">
+                        Debe llenar todos los campos del formulario!
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="!clavesValidas">
+                <div class="errores">
+                    <div class="alert alert-warning my-3" role="alert">
+                        Las claves deben ser Iguales!
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="!correoValido">
+                <div class="errores">
+                    <div class="alert alert-warning my-3" role="alert">
+                        El correo ya se encuentra registrado!
+                    </div>
+                </div>
+            </div>
+            <!-- F - Div Condicional para mostrar los errores -->
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <!-- Nota: Se retiro el ngModel del submit. -->
+                <button type="submit" class="btn btn-primary" >Registro</button>  
+            </div>
+            
+    
+        </form>
+        <!-- formulario login -->
+    
+        
+
+    </div>
+        
+
+
+</div>
